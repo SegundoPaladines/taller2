@@ -20,11 +20,14 @@ use App\Http\Controllers\Calificaciones;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/facultades', [Facultades::class, 'index']);
+Route::get('/facultades', [Facultades::class, 'index'])->name('listadofac'); //colocar nombre a la url
 Route::get('/programas', [Programas::class, 'index']);
 Route::get('/profesores', [Profesores::class, 'index']);
 Route::get('/estudiantes', [Estudiantes::class, 'index']);
 Route::get('/calificaciones', [Calificaciones::class, 'index']);
 
 //metodo del controlador facultades
-Route::get('/registrar_facultades', [Facultades::class, 'registrar']);
+Route::get('/registrar_facultades', [Facultades::class, 'form_registrar']);
+
+//metodo para meter los datos a la base de datos, está en el controlador
+Route::post('/registrar_facultades', [Facultades::class, 'registrar']);
