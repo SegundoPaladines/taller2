@@ -29,7 +29,7 @@
             <td>{{$f->nomfacultad}}</td>
             <td>
                 <a href="/" class="btn btn-primary">Editar</a>
-                <a href="/" class="btn btn-danger">Eliminar</a>
+                <a href="{{route('elimina_fac', $f->codfacultad)}}" class="btn btn-danger">Eliminar</a>
             </td>
         </tr>
         @php

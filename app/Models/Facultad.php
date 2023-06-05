@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Facultad extends Model
 {
     protected $table = 'facultades'; //tabla facultades
-    protected $primarykey = 'codfacultad'; //llave primaria de la tabla
+    protected $primaryKey = 'codfacultad'; //llave primaria de la tabla
     public $timestampos = true; //los de tiempo por defecto
 }

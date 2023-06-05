@@ -26,4 +26,10 @@ class Facultades extends Controller
         $facultad->save();//equivalente al incert
         return redirect()->route('listadofac'); //cuando la ruta tiene nombre se redirecciona por el nombre
     }
+    public function eliminar($id){
+        //incercion con el modelo $id trae el id a eliminar
+        $facultad = Facultad::findOrFail($id); //buscar si el id existe
+        $facultad->delete(); //eliminar el elemento
+        return redirect()->route('listadofac'); //cuando la ruta tiene nombre se redirecciona por el nombre
+    }
 }
