@@ -25,3 +25,6 @@ Route::get('/programas', [Programas::class, 'index']);
 Route::get('/profesores', [Profesores::class, 'index']);
 Route::get('/estudiantes', [Estudiantes::class, 'index']);
 Route::get('/calificaciones', [Calificaciones::class, 'index']);
+
+//metodo del controlador facultades
+Route::get('/registrar_facultades', [Facultades::class, 'registrar']);
