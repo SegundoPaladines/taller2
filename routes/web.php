@@ -30,7 +30,11 @@ Route::get('/calificaciones', [Calificaciones::class, 'index']);
 Route::get('/registrar_facultades', [Facultades::class, 'form_registrar']);
 
 //metodo para meter los datos a la base de datos, está en el controlador
-Route::post('/registrar_facultades', [Facultades::class, 'registrar']);
+Route::post('/registrar_facultad', [Facultades::class, 'registrar']);
 
 //metodo del controlador facultades eliminar
 Route::get('/facultades_eliminar/{id}', [Facultades::class, 'eliminar'])->name('elimina_fac');
+
+//metodo del controlador para Editar Facultades
+Route::get('/editar_facultad/{id}', [Facultades::class, 'form_editar'])->name('edita_fac');
+Route::post('/editar_fac/{id}', [Facultades::class, 'editar'])->name('edit_fac');
