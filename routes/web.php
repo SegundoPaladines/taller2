@@ -20,7 +20,6 @@ use App\Http\Controllers\Calificaciones;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/profesores', [Profesores::class, 'index']);
 Route::get('/estudiantes', [Estudiantes::class, 'index']);
 Route::get('/calificaciones', [Calificaciones::class, 'index']);
 
@@ -62,3 +61,22 @@ Route::post('/editar_programa/{id}', [Programas::class, 'editar'])->name('edit_p
 
 //llamar al metodo del controlador programas eliminar
 Route::get('/eliminar_programa/{id}', [Programas::class, 'eliminar'])->name('elimina_prog'); // ruta con nombre
+
+//MANEJO DE LOS PROFESORES
+//llamar al metodo del controlador Profesores index
+Route::get('/profesores', [Profesores::class, 'index'])->name('lista_prof'); //nombre a la ruta
+
+//llamar al metodo del controlador Profesores form_registrar
+Route::get('/resgistrar_profesores', [Profesores::class, 'form_registrar'])->name('f_reg_prof'); // ruta con nombre
+
+//llamar al metodo del controlador Profesores registrar
+Route::post('registrar_profesor', [Profesores::class, 'registrar'])->name('reg_prof');
+
+//llamar al metodo del controlador Profesores form_registrar
+Route::get('/editar_profesores/{id}', [Profesores::class, 'form_editar'])->name('f_edit_prof'); // ruta con nombre
+
+//llamar al metodo del controlador Profesores editar
+Route::post('/editar_profesor/{id}', [Profesores::class, 'editar'])->name('edit_prof'); // ruta con nombre
+
+//llamar al metodo del controlador Profesores eliminar
+Route::get('/eliminar_profesor/{id}', [Profesores::class, 'eliminar'])->name('elimina_prof'); // ruta con nombre

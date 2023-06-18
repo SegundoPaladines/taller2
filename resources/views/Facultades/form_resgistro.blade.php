@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Facultades')
+@section('title', 'Registrar Facultad')
 
 @section('content_header')
     <h1>Registrar una Facultad</h1>

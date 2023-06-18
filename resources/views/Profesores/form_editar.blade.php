@@ -1,13 +1,13 @@
 @extends('adminlte::page')
 
-@section('title', 'Editar Programa')
+@section('title', 'Editar Profesor')
 
 @section('content_header')
-    <h1>Editar Programa</h1>
+    <h1>Editar Profesor</h1>
 @stop
 
 @section('content')
-    <form action="{{route('edit_prog', $id)}}" method= "POST">
+    <form action="{{route('edit_prof', $id)}}" method= "POST">
         @csrf
         <div class="mb-3">
             <label for="codigo" class="form-label">Codigo</label>
@@ -18,12 +18,8 @@
             <input type="text" class="form-control" id="nombre" name="nombre" value="{{ $nombre }}">
         </div>
         <div class="mb-3">
-            <label for="facultades" class="form-label">Facultad</label>
-            <select class="form-control" name="facultades">
-                @foreach($facultades as $f)
-                    <option value="{{$f->codfacultad}}" {{ $f->codfacultad == $fac? 'selected' : '' }}>{{$f->nomfacultad}}</option>   
-                @endforeach
-            </select>
+            <label for="catedra" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="catedra" name="catedra" value="{{ $cat }}">
         </div>
         <button type="submit" class="btn btn-primary">Editar</button>
     </form>
