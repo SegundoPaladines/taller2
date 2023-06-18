@@ -18,15 +18,15 @@ class FacultadesSeeder extends Seeder
         $facultades = [
             [
                 'codfacultad'=>'10',
-                'nomfacultad'=>'Diseño Grafico'
+                'nomfacultad'=>'Facultad de Artes'
             ],
             [
                 'codfacultad'=>'11',
-                'nomfacultad'=>'Ingeniería'
+                'nomfacultad'=>'Facultad de Ingeniería'
             ],
             [
                 'codfacultad'=>'12',
-                'nomfacultad'=>'Derecho'
+                'nomfacultad'=>'Facultad Derecho'
             ],
             [
                 'codfacultad'=>'13',
@@ -34,7 +34,7 @@ class FacultadesSeeder extends Seeder
             ],
             [
                 'codfacultad'=>'14',
-                'nomfacultad'=>'Idiomas'
+                'nomfacultad'=>' Facultad de Idiomas'
             ],
         ];
         DB::table('facultades')->insert($facultades);

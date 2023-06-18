@@ -22,8 +22,10 @@ class Facultades extends Controller
 
     //mostrar formulario para editar la facultad
     public function form_editar($id){
+        //buscar la facultad por id y guardarla en $facultad
         $facultad = Facultad::findOrFail($id);
         $nom=$facultad->nomfacultad;
+        //mostrar la vista enviando id y nom, en la vista se reciben y acceden como $id y $nombre
         return view('Facultades.form_editar', ['id' => $id, 'nombre'=>$nom]);
     }
     
