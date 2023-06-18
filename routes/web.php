@@ -20,7 +20,7 @@ use App\Http\Controllers\Calificaciones;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/estudiantes', [Estudiantes::class, 'index']);
+
 Route::get('/calificaciones', [Calificaciones::class, 'index']);
 
 
@@ -80,3 +80,23 @@ Route::post('/editar_profesor/{id}', [Profesores::class, 'editar'])->name('edit_
 
 //llamar al metodo del controlador Profesores eliminar
 Route::get('/eliminar_profesor/{id}', [Profesores::class, 'eliminar'])->name('elimina_prof'); // ruta con nombre
+
+
+//MANEJO DE LOS ESTUDIANTES
+//llamar al metodo del controlador Estudiantes index
+Route::get('/estudiantes', [Estudiantes::class, 'index'])->name('lista_est'); //nombre a la ruta
+
+//llamar al metodo del controlador Estudiante form_registrar
+Route::get('/resgistrar_estudiantes', [Estudiantes::class, 'form_registrar'])->name('f_reg_est'); // ruta con nombre
+
+//llamar al metodo del controlador Estudiantes registrar
+Route::post('registrar_estudiante', [Estudiantes::class, 'registrar'])->name('reg_est');
+
+//llamar al metodo del controlador Estudiantes form_registrar
+Route::get('/editar_estudiantes/{id}', [Estudiantes::class, 'form_editar'])->name('f_edit_est'); // ruta con nombre
+
+//llamar al metodo del controlador Estudiantes editar
+Route::post('/editar_estudiante/{id}', [Estudiantes::class, 'editar'])->name('edit_est'); // ruta con nombre
+
+//llamar al metodo del controlador Estudiantes eliminar
+Route::get('/eliminar_estudiante/{id}', [Estudiantes::class, 'eliminar'])->name('elimina_est'); // ruta con nombre

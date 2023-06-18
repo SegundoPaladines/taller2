@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Profesor extends Model
+class Ciudad extends Model
 {
-    protected $table = 'profesores'; //tabla profesores
-    protected $primaryKey = 'codprofesor'; //llave primaria de la tabla
+    protected $table = 'ciudades'; //tabla Ciudades
+    protected $primaryKey = 'codciudad'; //llave primaria de la tabla
     public $timestampos = true; //los de tiempo por defecto
 }
